@@ -45,7 +45,7 @@ where last_name like 'E%' or last_name like '%E'
 order by emp_no;
 
 # Now reverse the sort order for both queries.
-select concat(first_name, ' ', last_name)
+select emp_no, birth_date, concat(first_name, ' ', last_name), gender, hire_date
 from employees
 where last_name like 'E%' or last_name like '%E'
 order by emp_no desc;
