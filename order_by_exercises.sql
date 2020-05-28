@@ -7,11 +7,19 @@ select * from employees
 where first_name in ('Irena', 'Vidya', 'Maya')
 order by first_name;
 
+select * from employees
+where first_name in ('Irena', 'Vidya', 'Maya')
+order by first_name desc;
+
 # Update the query to order by first name and then last name. The first
 # result should now be Irena Acton and the last should be Vidya Zweizig.
 select * from employees
 where first_name in ('Irena', 'Vidya', 'Maya')
 order by first_name ASC, last_name asc;
+
+select * from employees
+where first_name in ('Irena', 'Vidya', 'Maya')
+order by first_name desc, last_name desc;
 
 # Change the order by clause so that you order by last name before first
 # name. Your first result should still be Irena Acton but now the last result
@@ -19,6 +27,10 @@ order by first_name ASC, last_name asc;
 select * from employees
 where first_name in ('Irena', 'Vidya', 'Maya')
 order by last_name asc, first_name asc;
+
+select * from employees
+where first_name in ('Irena', 'Vidya', 'Maya')
+order by last_name desc, first_name desc;
 
 # Update your queries for employees with 'E' in their last name to sort the
 # results by their employee number. Your results should not change!
