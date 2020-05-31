@@ -18,7 +18,7 @@ values
 ('Alanis Morissette',   'Jagged Little Pill',   1995,   'Alternative rock', 24.4),
 ('Shania Twain',    'Come On Over', 1997,   'Country, Pop', 29.6),
 ('Celine Dion', 'Falling into You', 1996,   'Pop, Soft rock',   20.2),
-('The Beatles', "Sgt. Pepper's Lonely Hearts Club Band",   1967,   'Rock', 13.1),
+('The Beatles', 'Sgt. Pepper''s Lonely Hearts Club Band',   1967,   'Rock', 13.1),
 ('Eagles',  'Hotel California', 1976,   'Rock, Soft rock, Folk rock',   21.5),
 ('Various artists', 'Dirty Dancing',    1987,   'Pop, Rock, R&B',   17.9),
 ('Adele', '21', 2011,   'Pop, Soul',    25.3),
