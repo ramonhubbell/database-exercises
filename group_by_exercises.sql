@@ -8,7 +8,8 @@ select title, count(*) from titles group by title;
 # 'E'. Update the query to find just the unique last names that start
 # and end with 'E' using GROUP BY.
 select last_name, count(last_name) as 'last_name repeats'
-from employees where last_name like 'e%' and last_name like '%e'
+from employees
+where last_name like 'e%' and last_name like '%e'
 group by last_name;
 
 # Update your previous query to now find unique combinations of first and
@@ -27,17 +28,10 @@ order by last_name;
 
 # Add a COUNT() to your results and use ORDER BY to make it easier to find
 # employees whose unusual name is shared with others.
-select first_name, count(first_name) as repeats
-from employees
-group by first_name order by repeats asc;
-
-select first_name, last_name, count(first_name, last_name) as repeats
-from employees
-group by first_name, last_name order by repeats asc;
 
 # Update your query for 'Irena', 'Vidya', or 'Maya'. Use count(*) and GROUP BY
 # to find the number of employees for each gender with those names.
-select gender, count(gender) as 'repeats'
+select gender, count(*) as 'M and F repeats'
 from employees
 where first_name in ('Irena', 'Vidya', 'Maya')
 group by gender;
