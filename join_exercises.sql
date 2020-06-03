@@ -47,3 +47,25 @@ join salaries as s
 on e.emp_no = s.emp_no
 WHERE dm.to_date > curdate() and s.to_date > curdate()
 order by dept_name;
+
+-- Find the names of all current employees, their department name,
+-- and their current manager's name.
+select concat(e.first_name, ' ',e.last_name) as 'Employee Name',
+d.dept_name as 'Department Name',
+concat(e.first_name, ' ', e.last_name) as 'Manager Name'
+from employees as e
+join dept_emp as de
+on  de.emp_no = e.emp_no
+join departments as d
+on d.dept_no = de.dept_no
+-- join dept_manager as dm
+-- on e.emp_no = dm.emp_no
+where de.to_date > curdate()
+-- and dm.to_date > curdate()
+order by d.dept_name;
+
+select concat(first_name, ' ', last_name) as 'Manager Name', dm.to_date
+from employees as e
+join dept_manager as dm
+on dm.emp_no = e.emp_no
+where dm.to_date > curdate();
